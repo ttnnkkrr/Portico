@@ -1,0 +1,225 @@
+<?php
+
+namespace StructType;
+
+use \WsdlToPhp\PackageBase\AbstractStructBase;
+
+/**
+ * This class stands for EBTCashBackPurchaseReqBlock1Type StructType
+ * @subpackage Structs
+ */
+class EBTCashBackPurchaseReqBlock1Type extends AbstractStructBase
+{
+    /**
+     * The Amt
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 1
+     * @var float
+     */
+    public $Amt;
+    /**
+     * The CashBackAmount
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 1
+     * @var float
+     */
+    public $CashBackAmount;
+    /**
+     * The CardData
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 0
+     * @var \StructType\CardDataType
+     */
+    public $CardData;
+    /**
+     * The PinBlock
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 0
+     * @var string
+     */
+    public $PinBlock;
+    /**
+     * The CardHolderData
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 0
+     * @var \StructType\CardHolderDataType
+     */
+    public $CardHolderData;
+    /**
+     * The AllowDup
+     * Meta informations extracted from the WSDL
+     * - maxOccurs: 1
+     * - minOccurs: 0
+     * @var string
+     */
+    public $AllowDup;
+    /**
+     * Constructor method for EBTCashBackPurchaseReqBlock1Type
+     * @uses EBTCashBackPurchaseReqBlock1Type::setAmt()
+     * @uses EBTCashBackPurchaseReqBlock1Type::setCashBackAmount()
+     * @uses EBTCashBackPurchaseReqBlock1Type::setCardData()
+     * @uses EBTCashBackPurchaseReqBlock1Type::setPinBlock()
+     * @uses EBTCashBackPurchaseReqBlock1Type::setCardHolderData()
+     * @uses EBTCashBackPurchaseReqBlock1Type::setAllowDup()
+     * @param float $amt
+     * @param float $cashBackAmount
+     * @param \StructType\CardDataType $cardData
+     * @param string $pinBlock
+     * @param \StructType\CardHolderDataType $cardHolderData
+     * @param string $allowDup
+     */
+    public function __construct($amt = null, $cashBackAmount = null, \StructType\CardDataType $cardData = null, $pinBlock = null, \StructType\CardHolderDataType $cardHolderData = null, $allowDup = null)
+    {
+        $this
+            ->setAmt($amt)
+            ->setCashBackAmount($cashBackAmount)
+            ->setCardData($cardData)
+            ->setPinBlock($pinBlock)
+            ->setCardHolderData($cardHolderData)
+            ->setAllowDup($allowDup);
+    }
+    /**
+     * Get Amt value
+     * @return float
+     */
+    public function getAmt()
+    {
+        return $this->Amt;
+    }
+    /**
+     * Set Amt value
+     * @param float $amt
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setAmt($amt = null)
+    {
+        $this->Amt = $amt;
+        return $this;
+    }
+    /**
+     * Get CashBackAmount value
+     * @return float
+     */
+    public function getCashBackAmount()
+    {
+        return $this->CashBackAmount;
+    }
+    /**
+     * Set CashBackAmount value
+     * @param float $cashBackAmount
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setCashBackAmount($cashBackAmount = null)
+    {
+        $this->CashBackAmount = $cashBackAmount;
+        return $this;
+    }
+    /**
+     * Get CardData value
+     * @return \StructType\CardDataType|null
+     */
+    public function getCardData()
+    {
+        return $this->CardData;
+    }
+    /**
+     * Set CardData value
+     * @param \StructType\CardDataType $cardData
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setCardData(\StructType\CardDataType $cardData = null)
+    {
+        $this->CardData = $cardData;
+        return $this;
+    }
+    /**
+     * Get PinBlock value
+     * @return string|null
+     */
+    public function getPinBlock()
+    {
+        return $this->PinBlock;
+    }
+    /**
+     * Set PinBlock value
+     * @param string $pinBlock
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setPinBlock($pinBlock = null)
+    {
+        // validation for constraint: string
+        if (!is_null($pinBlock) && !is_string($pinBlock)) {
+            throw new \InvalidArgumentException(sprintf('Invalid value, please provide a string, "%s" given', gettype($pinBlock)), __LINE__);
+        }
+        $this->PinBlock = $pinBlock;
+        return $this;
+    }
+    /**
+     * Get CardHolderData value
+     * @return \StructType\CardHolderDataType|null
+     */
+    public function getCardHolderData()
+    {
+        return $this->CardHolderData;
+    }
+    /**
+     * Set CardHolderData value
+     * @param \StructType\CardHolderDataType $cardHolderData
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setCardHolderData(\StructType\CardHolderDataType $cardHolderData = null)
+    {
+        $this->CardHolderData = $cardHolderData;
+        return $this;
+    }
+    /**
+     * Get AllowDup value
+     * @return string|null
+     */
+    public function getAllowDup()
+    {
+        return $this->AllowDup;
+    }
+    /**
+     * Set AllowDup value
+     * @uses \EnumType\BooleanType::valueIsValid()
+     * @uses \EnumType\BooleanType::getValidValues()
+     * @throws \InvalidArgumentException
+     * @param string $allowDup
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public function setAllowDup($allowDup = null)
+    {
+        // validation for constraint: enumeration
+        if (!\EnumType\BooleanType::valueIsValid($allowDup)) {
+            throw new \InvalidArgumentException(sprintf('Value "%s" is invalid, please use one of: %s', $allowDup, implode(', ', \EnumType\BooleanType::getValidValues())), __LINE__);
+        }
+        $this->AllowDup = $allowDup;
+        return $this;
+    }
+    /**
+     * Method called when an object has been exported with var_export() functions
+     * It allows to return an object instantiated with the values
+     * @see AbstractStructBase::__set_state()
+     * @uses AbstractStructBase::__set_state()
+     * @param array $array the exported values
+     * @return \StructType\EBTCashBackPurchaseReqBlock1Type
+     */
+    public static function __set_state(array $array)
+    {
+        return parent::__set_state($array);
+    }
+    /**
+     * Method returning the class name
+     * @return string __CLASS__
+     */
+    public function __toString()
+    {
+        return __CLASS__;
+    }
+}
